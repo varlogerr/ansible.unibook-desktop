@@ -22,16 +22,16 @@
     - vlc
   vars:
     # settable vars
-      my_user: varlog # user
-      my_group: varlog # user group
-      git_user: Varlog # git user
-      git_email: varlog.err@gmail.com # git user email
+      my_user:  # user
+      my_group:  # user group
+      git_user:  # git user
+      git_email:  # git user email
 
     # changable vars
       # supported values: ubuntu, "{{ ansible_distribution | lower }}"
-      default_distro_name: ubuntu
+      default_distro_name: "{{ ansible_distribution | lower }}"
       # supported values: trusty, xenial, "{{ ansible_distribution_release | lower }}"
-      default_distro_codename: xenial
+      default_distro_codename: "{{ ansible_distribution_release | lower }}"
 
       my_home_dir: "/home/{{ my_user }}"
       my_conf_dir: "{{ my_home_dir }}/.{{ my_user }}_conf"
