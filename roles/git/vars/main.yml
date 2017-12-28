@@ -1,0 +1,3 @@
+---
+_git_custom_gitconfig_path: "{{ my_conf_dir }}/.git_gitconfig"
+_git_custom_bashrc_path: "{{ my_conf_dir }}/.git_bashrc"

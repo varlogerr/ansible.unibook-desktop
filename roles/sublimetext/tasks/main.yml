@@ -1,0 +1,4 @@
+---
+- include: _install-sublime.yml
+- include: _configure-sublime.yml
+

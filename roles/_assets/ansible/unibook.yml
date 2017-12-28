@@ -1,0 +1,39 @@
+---
+- hosts: local
+  become: yes
+  # see vars dependencies in comments
+  roles:
+    # my_user
+    - base
+    # my_user, my_group, my_home_dir, my_conf_dir
+    - bash
+    - copyq
+    # default_distro_name, default_distro_codename, docker_compose_version
+    - docker
+    # my_user, my_group, my_home_dir, my_conf_dir,
+    # git_user, git_email
+    - git
+    - googlechrome
+    - skype
+    # my_user, my_group, my_home_dir, sublime_config_dir
+    - sublimetext
+    - teamviewer
+    - toolbox
+    - vlc
+  vars:
+    # settable vars
+      my_user: varlog # user
+      my_group: varlog # user group
+      git_user: Varlog # git user
+      git_email: varlog.err@gmail.com # git user email
+
+    # changable vars
+      # supported values: ubuntu, "{{ ansible_distribution | lower }}"
+      default_distro_name: ubuntu
+      # supported values: trusty, xenial, "{{ ansible_distribution_release | lower }}"
+      default_distro_codename: xenial
+
+      my_home_dir: "/home/{{ my_user }}"
+      my_conf_dir: "{{ my_home_dir }}/.{{ my_user }}_conf"
+      docker_compose_version: 1.18.0
+      sublime_config_dir: "{{ my_home_dir }}/.config/sublime-text-3/Packages/User"

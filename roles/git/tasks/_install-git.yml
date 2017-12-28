@@ -1,0 +1,13 @@
+---
+- name: add git ppa
+  apt_repository:
+    repo: 'ppa:git-core/ppa'
+    codename: trusty
+    filename: git
+    state: present
+
+- name: update cache
+  shell: apt-get update
+
+- name: install git
+  apt: name=git state=latest
