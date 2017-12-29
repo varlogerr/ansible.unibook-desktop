@@ -23,6 +23,8 @@
     - myconfdir
     # my_user, nodejs_version
     - nodejs
+    # default_distro_codename
+    - oraclejava
     - skype
     # my_user, sublime_config_dir
     - sublimetext
