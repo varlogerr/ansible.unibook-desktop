@@ -5,6 +5,9 @@
     codename: "{{ default_distro_codename }}"
     state: present
 
+- name: update cache
+  shell: apt-get update
+
 - name: set licence selected
   shell: /bin/echo debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 
@@ -15,5 +18,4 @@
   apt:
     name: oracle-java8-installer
     state: latest
-    update-cache: yes
     force: yes
