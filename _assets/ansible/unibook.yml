@@ -21,6 +21,8 @@
     - mybindir
     # my_user, my_conf_dir
     - myconfdir
+    # my_user, nodejs_version
+    - nodejs
     - skype
     # my_user, sublime_config_dir
     - sublimetext
