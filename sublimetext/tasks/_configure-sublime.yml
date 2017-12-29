@@ -1,18 +1,18 @@
 ---
-- name: create configuration directory
-  file:
-    path:  "{{ sublime_config_dir }}"
-    state: directory
-    owner: "{{ my_user }}"
-    group: "{{ my_group }}"
-    mode:  0755
-    recurse: yes
+- block:
 
-- name: add custom configuration
-  template:
-    src: Preferences.sublime-settings
-    dest: "{{ sublime_config_dir }}/Preferences.sublime-settings"
-    owner: "{{ my_user }}"
-    group: "{{ my_group }}"
-    mode: 0664
+  - name: create configuration directory
+    file:
+      path:  "{{ sublime_config_dir }}"
+      state: directory
+      mode:  0755
+      recurse: yes
 
+  - name: add custom configuration
+    template:
+      src: Preferences.sublime-settings
+      dest: "{{ sublime_config_dir }}/Preferences.sublime-settings"
+      mode: 0664
+
+  become: true
+  become_user: "{{ my_user }}"

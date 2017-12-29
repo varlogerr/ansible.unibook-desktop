@@ -15,4 +15,3 @@
 
 - name: install sublime text
   apt: name="sublime-text" state=latest
-

@@ -1,25 +1,24 @@
 ---
-- name: crete configuration directory
-  file:
-    path: "{{ my_conf_dir }}"
-    owner: "{{ my_user }}"
-    group: "{{ my_group }}"
-    state: directory
-    mode: 0700
+- block:
 
-- name: create user custom bashrc
-  template:
-    src: bashrc.j2
-    dest: "{{ _bash_custom_bashrc_path }}"
-    owner: "{{ my_user }}"
-    group: "{{ my_group }}"
-    mode: 0600
+  - name: crete configuration directory
+    file:
+      path: "{{ my_conf_dir }}"
+      state: directory
+      mode: 0700
 
-- name: include custom bashrc to the user bashrc
-  lineinfile:
-    dest: "{{ my_home_dir }}/.bashrc"
-    create: yes
-    owner: "{{ my_user }}"
-    group: "{{ my_group }}"
-    mode: 0644
-    line: "source {{ _bash_custom_bashrc_path }}"
+  - name: create user custom bashrc
+    template:
+      src: bashrc.j2
+      dest: "{{ _bash_custom_bashrc_path }}"
+      mode: 0600
+
+  - name: include custom bashrc to the user bashrc
+    lineinfile:
+      dest: "{{ my_home_dir }}/.bashrc"
+      create: yes
+      mode: 0644
+      line: "source {{ _bash_custom_bashrc_path }}"
+
+  become: true
+  become_user: "{{ my_user }}"

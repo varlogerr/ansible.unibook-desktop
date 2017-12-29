@@ -5,17 +5,17 @@
   roles:
     # my_user
     - base
-    # my_user, my_group, my_home_dir, my_conf_dir
+    # my_user, my_home_dir, my_conf_dir
     - bash
     - copyq
     # default_distro_name, default_distro_codename, docker_compose_version
     - docker
-    # my_user, my_group, my_home_dir, my_conf_dir,
+    # my_user, my_home_dir, my_conf_dir,
     # git_user, git_email
     - git
     - googlechrome
     - skype
-    # my_user, my_group, my_home_dir, sublime_config_dir
+    # my_user, my_home_dir, sublime_config_dir
     - sublimetext
     - teamviewer
     - toolbox
@@ -23,7 +23,6 @@
   vars:
     # settable vars
       my_user:  # user
-      my_group:  # user group
       git_user:  # git user
       git_email:  # git user email
 
