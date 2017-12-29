@@ -1,12 +1,6 @@
 ---
 - block:
 
-  - name: crete configuration directory
-    file:
-      path: "{{ my_conf_dir }}"
-      state: directory
-      mode: 0700
-
   - name: add the user custom gitconfig
     template:
       src: gitconfig.j2

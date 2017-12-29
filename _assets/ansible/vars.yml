@@ -14,5 +14,6 @@ default_distro_codename: "{{ ansible_distribution_release | lower }}"
 
 my_home_dir: "/home/{{ my_user }}"
 my_conf_dir: "{{ my_home_dir }}/.{{ my_user }}_conf"
+my_bin_dir: "{{ my_home_dir }}/.{{ my_user }}_bin"
 docker_compose_version: 1.18.0
 sublime_config_dir: "{{ my_home_dir }}/.config/sublime-text-3/Packages/User"

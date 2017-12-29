@@ -1,0 +1,17 @@
+---
+- block:
+
+  - name: create bin directory
+    file:
+      path: "{{ my_bin_dir }}"
+      state: directory
+      mode: 0700
+
+  - name: add bin directory to PATH
+    lineinfile:
+      dest: "{{ my_home_dir }}/.bashrc"
+      create: yes
+      line: "export PATH=$PATH:{{ my_bin_dir }}"
+
+  become: true
+  become_user: "{{ my_user }}"

@@ -1,0 +1,8 @@
+---
+- name: crete configuration directory
+  file:
+    path: "{{ my_conf_dir }}"
+    state: directory
+    mode: 0700
+  become: true
+  become_user: "{{ my_user }}"

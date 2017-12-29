@@ -1,0 +1,8 @@
+---
+- name: create composer script
+  template:
+    src: composer
+    dest: "{{ my_bin_dir }}/composer"
+    mode: 0700
+  become: true
+  become_user: "{{ my_user }}"
