@@ -28,6 +28,8 @@
     - sublimetext
     - teamviewer
     - toolbox
+    # vagrant_version
+    - vagrant
     # default_distro_codename, virtualbox_version
     - virtualbox
     - vlc
