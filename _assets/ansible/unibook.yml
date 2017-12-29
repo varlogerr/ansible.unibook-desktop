@@ -28,4 +28,6 @@
     - sublimetext
     - teamviewer
     - toolbox
+    # default_distro_codename, virtualbox_version
+    - virtualbox
     - vlc
