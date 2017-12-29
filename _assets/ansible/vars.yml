@@ -17,3 +17,4 @@ my_conf_dir: "{{ my_home_dir }}/.{{ my_user }}_conf"
 my_bin_dir: "{{ my_home_dir }}/.{{ my_user }}_bin"
 docker_compose_version: 1.18.0
 sublime_config_dir: "{{ my_home_dir }}/.config/sublime-text-3/Packages/User"
+composer_version: 1.5

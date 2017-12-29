@@ -1,7 +1,7 @@
 ---
 - name: create composer script
   template:
-    src: composer
+    src: composer.j2
     dest: "{{ my_bin_dir }}/composer"
     mode: 0700
   become: true
