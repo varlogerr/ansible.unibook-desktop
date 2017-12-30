@@ -1,0 +1,3 @@
+---
+- name: start ssh
+  service: name=ssh state=started

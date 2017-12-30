@@ -23,6 +23,7 @@
     - myconfdir
     # my_user, nodejs_version
     - nodejs
+    - opensshserv
     # default_distro_codename
     - oraclejava
     - skype
