@@ -14,6 +14,8 @@
     # my_user, my_bin_dir
     - composer
     - copyq
+    # default_distro_codename
+    - deluge
     # default_distro_name, default_distro_codename, docker_compose_version
     - docker
     # my_user, my_home_dir, my_conf_dir, git_user, git_email
