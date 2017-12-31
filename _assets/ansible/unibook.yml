@@ -9,6 +9,8 @@
     - base
     # my_user, my_home_dir, my_conf_dir
     - bash
+    # default_distro_codename
+    - bravebrowser
     # my_user, my_bin_dir
     - composer
     - copyq
