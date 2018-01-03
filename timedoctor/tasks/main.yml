@@ -1,0 +1,3 @@
+---
+- name: install timedoctor
+  apt: deb=https://updates.timedoctor.com/download/_production/tdpro/linux-ubuntu-16.04/timedoctorpro_1.4.75-14ubuntu16.04_amd64.deb

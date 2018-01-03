@@ -34,6 +34,7 @@
     # my_user, sublime_config_dir
     - sublimetext
     - teamviewer
+    - timedoctor
     - toolbox
     # vagrant_version
     - vagrant
