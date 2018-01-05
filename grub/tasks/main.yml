@@ -1,0 +1,7 @@
+---
+- name: add grub timeout
+  template:
+    src: timeout.j2
+    dest: "/etc/default/grub.d/00_timeout.cfg"
+    mode: 0644
+  notify: update grub

@@ -21,6 +21,8 @@
     # my_user, my_home_dir, my_conf_dir, git_user, git_email
     - git
     - googlechrome
+    # grub_timeout, grub_recordfail_timeout
+    - grub
     # my_user, my_bin_dir
     - mybindir
     # my_user, my_conf_dir
