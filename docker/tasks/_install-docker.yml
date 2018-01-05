@@ -13,9 +13,8 @@
 
 - name: install docker-ce
   apt: name=docker-ce state=latest force=yes
-
-- name: ensure docker starts on boot
-  service: name=docker state=started enabled=yes
+  notify: start docker
 
 - name: add {{ my_user }} to docker group
   user: name="{{ my_user }}" groups=docker append=yes
+  notify: start docker
