@@ -1,7 +1,0 @@
----
-- name: export lsb release path
-  lineinfile:
-    dest: "{{ my_home_dir }}/.bashrc"
-    create: yes
-    line: "export LSB_ETC_LSB_RELEASE=/etc/upstream-release/lsb-release"
-  when: ansible_lsb.id | lower == "linuxmint"

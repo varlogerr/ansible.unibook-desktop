@@ -23,7 +23,6 @@
     - googlechrome
     # grub_timeout, grub_recordfail_timeout
     - grub
-    - lsbupstream
     # my_user, my_bin_dir
     - mybindir
     # my_user, my_conf_dir
