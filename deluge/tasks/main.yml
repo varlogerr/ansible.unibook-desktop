@@ -11,3 +11,6 @@
 
 - name: install deluge
   apt: name=deluge state=latest
+
+- name: set deluge default for magnets
+  shell: xdg-mime default deluge.desktop x-scheme-handler/magnet
