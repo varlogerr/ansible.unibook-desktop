@@ -1,0 +1,10 @@
+---
+# https://community.linuxmint.com/tutorial/view/2304
+- name: create xorg.conf directory
+  file: path=/etc/X11/xorg.conf.d state=directory
+
+- name: create config
+  template:
+      src: intel.conf.j2
+      dest: /etc/X11/xorg.conf.d/20-intel.conf
+      mode: 0644

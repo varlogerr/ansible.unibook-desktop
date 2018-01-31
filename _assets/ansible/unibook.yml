@@ -44,3 +44,4 @@
     # default_distro_codename, virtualbox_version
     - virtualbox
     - vlc
+    - vsync
