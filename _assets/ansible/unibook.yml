@@ -28,6 +28,7 @@
     - mybindir
     # my_user, my_conf_dir
     - myconfdir
+    - nload
     # my_user, nodejs_version
     - nodejs
     - opensshserv
